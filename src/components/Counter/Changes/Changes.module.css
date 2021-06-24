@@ -1,0 +1,11 @@
+.wrap{
+    display: flex;
+    border: 2px solid #63DAFC;
+    background-color: #2A2C35;
+    justify-content: space-around;
+    padding: 2rem;
+    border: 2px solid #63DAFC;
+    margin: 1rem 0 ;
+    border-radius: 10px;
+
+}

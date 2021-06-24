@@ -1,0 +1,13 @@
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #63DAFC;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 4rem 0;
+}
+.value{
+    display: flex;
+    justify-content: space-around;
+}

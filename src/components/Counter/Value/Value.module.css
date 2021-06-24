@@ -1,0 +1,19 @@
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #63DAFC;
+    border-radius: 10px;
+}
+.red{
+    color: red;
+}
+.black{
+    color: black;
+}
+.num{
+    font-size: 5em;
+    font-weight: bold;
+    padding: 3rem 0;
+
+}

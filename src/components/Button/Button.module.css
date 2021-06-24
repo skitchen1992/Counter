@@ -1,0 +1,13 @@
+.default{
+    background-color: #63DAFC;
+    padding: .5rem;
+    border: 2px solid #63DAFC;
+    border-radius: 2px;
+    font-size: 2em;
+    font-weight: bold;
+    outline:none;
+}
+.default:active{
+    border: 2px solid red;
+}
+
