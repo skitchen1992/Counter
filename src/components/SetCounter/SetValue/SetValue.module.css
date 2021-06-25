@@ -1,13 +1,29 @@
 .wrap{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: #63DAFC;
     border-radius: 10px;
     flex-direction: column;
-    padding: 4rem 0;
+    height: 12rem;
 }
 .value{
     display: flex;
-    justify-content: space-around;
+}
+.default{
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 1.5rem;
+    outline: none;
+    margin-left: 1.5rem;
+    text-align: center;
+}
+.error{
+    border: 2px solid red;
+    background-color: #F1A6B5;
+}
+.title{
+    font-size: 2em;
+    font-weight: bold;
+
 }

@@ -1,17 +1,25 @@
-.wrap{
+.wrap {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #63DAFC;
     border-radius: 10px;
+    height: 12rem;
 }
-.red{
+
+.red {
     color: red;
 }
-.black{
+
+.black {
     color: black;
 }
-.num{
+
+.default {
+    font-size: 2em;
+}
+
+.num {
     font-size: 5em;
     font-weight: bold;
     padding: 3rem 0;

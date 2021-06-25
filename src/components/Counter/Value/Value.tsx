@@ -6,11 +6,28 @@ type ValueType = {
     value: number | string
 }
 
+
 const Value = (props: ValueType) => {
-    let finalStyle = `${props.value === +props.maxValue ? s.red : s.black} ${s.num}`
+
+
+    let finalStyle = () => {
+        if (props.value === +props.maxValue) {
+            return `${s.red} ${s.num} ${s.default}`
+        }
+        if (typeof props.value === 'number') {
+            return `${s.num} ${s.default}`
+        }
+        if (props.value === "incorrect value") {
+            return `${s.red} ${s.default} `
+        } else {
+            return `${s.default}`
+        }
+
+    }
+
     return (
         <div className={s.wrap}>
-            <div className={finalStyle}>{props.value}</div>
+            <div className={finalStyle()}>{props.value}</div>
         </div>
     );
 };

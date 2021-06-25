@@ -7,7 +7,9 @@ type ChangesType = {
     inc: () => void
     value: number | string
     maxValue: number
-    reset:()=> void
+    reset: () => void
+    valueDisabledBtnInc: boolean
+    valueDisabledBtnReset: boolean
 }
 
 const Changes = (props: ChangesType) => {
@@ -16,13 +18,12 @@ const Changes = (props: ChangesType) => {
     return (
         <div className={s.wrap}>
             <Button
-                disabled={props.value === +props.maxValue}
+                disabled={props.valueDisabledBtnInc}
                 onClick={props.inc}>
-                INC
+                inc
             </Button>
-            <Button onClick={props.reset} disabled={false}>
-
-                RESET
+            <Button onClick={props.reset} disabled={props.valueDisabledBtnReset}>
+                reset
             </Button>
         </div>
     );

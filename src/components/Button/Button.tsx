@@ -12,7 +12,7 @@ const Button: React.FC<ButtonType> = (
 ) => {
 
 
-    const finalClassName = `${s.default}`     ;
+    const finalClassName = `${s.default}`
     return (
 
         <button className={finalClassName} {...restProps}  />
