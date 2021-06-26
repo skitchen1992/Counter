@@ -1,17 +1,17 @@
 import React, {ChangeEvent} from 'react';
 
 import SetValue from "./SetValue/SetValue";
-import Set from "./Set/Set";
+import SetButton from "./Set/SetButton";
 
 type SetCounterType = {
     startValue: number
     maxValue: number
     changeMaxValue: (e: number) => void
-    changeStartValue: (e: ChangeEvent<HTMLInputElement>) => void
-    setNewStartValue: () => void
-    valueDisabledBtnSet: boolean
-    errorMaxBtn: boolean
-    errorStartBtn: boolean
+    changeStartValue: (e: number) => void
+    setNewValue: () => void
+    isSetButtonDisabled: boolean
+    isMaxInputError: boolean
+    isStartInputError: boolean
 }
 
 const SetCounter = (props: SetCounterType) => {
@@ -21,13 +21,13 @@ const SetCounter = (props: SetCounterType) => {
                       maxValue={props.maxValue}
                       changeMaxValue={props.changeMaxValue}
                       changeStartValue={props.changeStartValue}
-                      errorMaxBtn={props.errorMaxBtn}
-                      errorStartBtn={props.errorStartBtn}
+                      isMaxInputError={props.isMaxInputError}
+                      isStartInputError={props.isStartInputError}
             />
-            <Set startValue={props.startValue}
-                 maxValue={props.maxValue}
-                 setNewStartValue={props.setNewStartValue}
-                 valueDisabledBtnSet={props.valueDisabledBtnSet}/>
+            <SetButton startValue={props.startValue}
+                       maxValue={props.maxValue}
+                       setNewValue={props.setNewValue}
+                       isSetButtonDisabled={props.isSetButtonDisabled}/>
         </>
     );
 };

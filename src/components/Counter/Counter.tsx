@@ -1,25 +1,25 @@
 import React from 'react';
-import Value from "./Value/Value";
+import DisplayValue from "./Value/DisplayValue";
 import Changes from "./Changes/Changes";
 
 type CounterType = {
     inc: () => void
-    value: number | string
+    displayValue: number | string
     maxValue: number
     reset: () => void
-    valueDisabledBtnInc: boolean
-    valueDisabledBtnReset: boolean
+    isIncButtonDisabled: boolean
+    isResetButtonDisabled: boolean
 
 }
 
 const Counter: React.FC<CounterType> = (
-    {value, maxValue, inc, reset, valueDisabledBtnInc, valueDisabledBtnReset}
+    {displayValue, maxValue, inc, reset, isIncButtonDisabled, isResetButtonDisabled}
 ) => {
     return (
         <>
-            <Value value={value} maxValue={maxValue}/>
-            <Changes inc={inc} value={value} maxValue={maxValue} reset={reset} valueDisabledBtnInc={valueDisabledBtnInc}
-                     valueDisabledBtnReset={valueDisabledBtnReset}/>
+            <DisplayValue displayValue={displayValue} maxValue={maxValue}/>
+            <Changes inc={inc} displayValue={displayValue} maxValue={maxValue} reset={reset} isIncButtonDisabled={isIncButtonDisabled}
+                     isResetButtonDisabled={isResetButtonDisabled}/>
         </>
     );
 };

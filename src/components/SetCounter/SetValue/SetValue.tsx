@@ -5,9 +5,9 @@ type SetValueType = {
     startValue: number
     maxValue: number
     changeMaxValue: (e: number) => void
-    changeStartValue: (e: ChangeEvent<HTMLInputElement>) => void
-    errorMaxBtn: boolean
-    errorStartBtn: boolean
+    changeStartValue: (e: number) => void
+    isMaxInputError: boolean
+    isStartInputError: boolean
 
 }
 
@@ -15,9 +15,9 @@ const SetValue = (props: SetValueType) => {
     const changeMaxValue = (e: ChangeEvent<HTMLInputElement>) => {
         props.changeMaxValue(+e.currentTarget.value)
     }
-    const changeStartValue = (e: ChangeEvent<HTMLInputElement>) => props.changeStartValue(e)
-    const finalClassNameMax = `${s.default} ${props.errorMaxBtn ? s.error : ''}`
-    const finalClassNameStart = `${s.default} ${props.errorStartBtn ? s.error : ''} `
+    const changeStartValue = (e: ChangeEvent<HTMLInputElement>) => props.changeStartValue(+e.currentTarget.value)
+    const finalClassNameMax = `${s.default} ${props.isMaxInputError ? s.error : ''}`
+    const finalClassNameStart = `${s.default} ${props.isStartInputError ? s.error : ''} `
     return (
         <div className={s.wrap}>
             <div className={s.value}>

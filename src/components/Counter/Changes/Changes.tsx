@@ -5,11 +5,11 @@ import Button from "../../Button/Button";
 
 type ChangesType = {
     inc: () => void
-    value: number | string
+    displayValue: number | string
     maxValue: number
     reset: () => void
-    valueDisabledBtnInc: boolean
-    valueDisabledBtnReset: boolean
+    isIncButtonDisabled: boolean
+    isResetButtonDisabled: boolean
 }
 
 const Changes = (props: ChangesType) => {
@@ -18,11 +18,11 @@ const Changes = (props: ChangesType) => {
     return (
         <div className={s.wrap}>
             <Button
-                disabled={props.valueDisabledBtnInc}
+                disabled={props.isIncButtonDisabled}
                 onClick={props.inc}>
                 inc
             </Button>
-            <Button onClick={props.reset} disabled={props.valueDisabledBtnReset}>
+            <Button onClick={props.reset} disabled={props.isResetButtonDisabled}>
                 reset
             </Button>
         </div>

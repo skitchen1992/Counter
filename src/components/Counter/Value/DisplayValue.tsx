@@ -1,23 +1,23 @@
 import React from 'react';
 import s from './Value.module.css';
 
-type ValueType = {
+type DisplayValueType = {
     maxValue: number
-    value: number | string
+    displayValue: number | string
 }
 
 
-const Value = (props: ValueType) => {
+const DisplayValue = (props: DisplayValueType) => {
 
 
     let finalStyle = () => {
-        if (props.value === +props.maxValue) {
+        if (props.displayValue === +props.maxValue) {
             return `${s.red} ${s.num} ${s.default}`
         }
-        if (typeof props.value === 'number') {
+        if (typeof props.displayValue === 'number') {
             return `${s.num} ${s.default}`
         }
-        if (props.value === "incorrect value") {
+        if (props.displayValue === "incorrect value") {
             return `${s.red} ${s.default} `
         } else {
             return `${s.default}`
@@ -27,9 +27,9 @@ const Value = (props: ValueType) => {
 
     return (
         <div className={s.wrap}>
-            <div className={finalStyle()}>{props.value}</div>
+            <div className={finalStyle()}>{props.displayValue}</div>
         </div>
     );
 };
 
-export default Value;
+export default DisplayValue;

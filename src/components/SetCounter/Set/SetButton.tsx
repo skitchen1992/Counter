@@ -5,19 +5,19 @@ import Button from "../../Button/Button";
 type SetType = {
     startValue: number
     maxValue: number
-    setNewStartValue: () => void
-    valueDisabledBtnSet: boolean
+    setNewValue: () => void
+    isSetButtonDisabled: boolean
 }
 
-const Set = (props: SetType) => {
+const SetButton = (props: SetType) => {
 
     return (
         <div className={s.wrap}>
-            <Button disabled={props.valueDisabledBtnSet} onClick={props.setNewStartValue}>
+            <Button disabled={props.isSetButtonDisabled} onClick={props.setNewValue}>
                 set
             </Button>
         </div>
     );
 };
 
-export default Set;
+export default SetButton;
