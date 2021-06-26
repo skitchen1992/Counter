@@ -24,7 +24,7 @@ function App() {
             const counter = JSON.parse(counterAsString)
             setMaxValue(counter.maxValue)
             setStartValue(counter.startValue)
-            setDisplayValue(counter.value)//=======counter.value
+            setDisplayValue(counter.value)
             setIsSetButtonDisabled(counter.valueDisabledBtnSet)
             setIsIncButtonDisabled(counter.valueDisabledBtnInc)
             setIsResetButtonDisabled(counter.valueDisabledBtnReset)
@@ -38,7 +38,7 @@ function App() {
         const counter = {
             maxValue,
             startValue,
-            value: displayValue, //startValue
+            value: displayValue,
             valueDisabledBtnSet: isSetButtonDisabled,
             valueDisabledBtnInc: isIncButtonDisabled,
             valueDisabledBtnReset: isResetButtonDisabled,
