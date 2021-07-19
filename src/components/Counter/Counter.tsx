@@ -18,7 +18,8 @@ const Counter: React.FC<CounterType> = (
     return (
         <>
             <DisplayValue displayValue={displayValue} maxValue={maxValue}/>
-            <Changes inc={inc} displayValue={displayValue} maxValue={maxValue} reset={reset} isIncButtonDisabled={isIncButtonDisabled}
+            <Changes inc={inc} displayValue={displayValue} maxValue={maxValue} reset={reset}
+                     isIncButtonDisabled={isIncButtonDisabled}
                      isResetButtonDisabled={isResetButtonDisabled}/>
         </>
     );

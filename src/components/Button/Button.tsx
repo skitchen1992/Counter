@@ -3,15 +3,11 @@ import s from '../Button/Button.module.css'
 
 type DefaultButtonType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
-type ButtonType = DefaultButtonType & {
-    //setNewStartValue:()=>void
-}
+type ButtonType = DefaultButtonType & {}
 
 const Button: React.FC<ButtonType> = (
-    {...restProps}, setNewStartValue,
+    {...restProps},
 ) => {
-
-
     const finalClassName = `${s.default}`
     return (
 
@@ -20,4 +16,3 @@ const Button: React.FC<ButtonType> = (
 };
 
 export default Button;
-//onClick={setNewStartValue}

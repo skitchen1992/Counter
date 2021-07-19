@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import s from './App.module.css';
 import Counter from "./components/Counter/Counter";
@@ -6,7 +6,6 @@ import SetCounter from "./components/SetCounter/SetCounter";
 
 
 function App() {
-
     const [maxValue, setMaxValue] = useState(0)
     const [startValue, setStartValue] = useState(0)
     const [displayValue, setDisplayValue] = useState<number | string>('')
@@ -92,7 +91,7 @@ function App() {
             setIsSetButtonDisabled(true)
             setDisplayValue("incorrect value")
         } else {
-            setIsSetButtonDisabled(false)
+
         }
     }
     const setNewValue = () => {
@@ -132,12 +131,8 @@ function App() {
                              isIncButtonDisabled={isIncButtonDisabled}
                              isResetButtonDisabled={isResetButtonDisabled}/>
                 </div>
-
             </div>
-
         </>
-
-
     );
 }
 

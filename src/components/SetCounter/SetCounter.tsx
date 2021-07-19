@@ -1,5 +1,4 @@
-import React, {ChangeEvent} from 'react';
-
+import React from 'react';
 import SetValue from "./SetValue/SetValue";
 import SetButton from "./Set/SetButton";
 
